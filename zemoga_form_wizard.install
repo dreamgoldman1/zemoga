@@ -1,0 +1,36 @@
+<?php
+
+/*
+ * @file
+ * Schema definition to install tables for Form Wizard
+ */
+
+define('ZEMOGA_USER', 'zemoga_user');
+
+function zemoga_form_wizard_schema(){
+    $schema = [];
+    $schema[ZEMOGA_USER] = array(
+        'description' => 'Store Zemoga users',
+        'fields' => array(
+            'id'            => array('type' => 'serial', 'description' => 'The unique ID for each user', 'not null' => TRUE,),
+            'id_user'       => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '',),
+            'first_name'    => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '',),
+            'last_name'     => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '',),
+            'gender'        => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '',),
+            'birthday'      => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '',),
+            'city'          => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '',),
+            'phone'         => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '',),
+            'address'       => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '',),
+            'user'          => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '',),
+            'password'      => array('type' => 'varchar', 'length' => 255, 'not null' => TRUE, 'default' => '',),
+            'creation_date' => array('mysql_type' => 'DATETIME', 'not null' => TRUE,),
+        ),
+        'indexes' => array(
+            'fx_id'     => array('id'),
+            'fx_user'   => array('user'),
+        ),
+        'primary key' => array('id'),
+    );
+    
+    return $schema;
+}

@@ -1,0 +1,6 @@
+name: Zemoga Form Wizard Module
+description: Creates a page with a multistep form.
+package: Zemoga
+
+type: module
+core: 8.x

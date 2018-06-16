@@ -1,0 +1,23 @@
+zemoga.step_one:
+  path: '/zemoga/step-one'
+  defaults:
+    _form: '\Drupal\zemoga_form_wizard\Form\FormWizard\StepOneForm'
+    _title: 'Personal Information'
+  requirements:
+    _permission: 'access content'
+    
+zemoga.step_two:
+  path: '/zemoga/step-two'
+  defaults:
+    _form: '\Drupal\zemoga_form_wizard\Form\FormWizard\StepTwoForm'
+    _title: 'Contact Information'
+  requirements:
+    _permission: 'access content'
+
+zemoga.step_three:
+  path: '/zemoga/step-three'
+  defaults:
+    _form: '\Drupal\zemoga_form_wizard\Form\FormWizard\StepThreeForm'
+    _title: 'Login Information'
+  requirements:
+    _permission: 'access content'
